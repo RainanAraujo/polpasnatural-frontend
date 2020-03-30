@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { AppBar, makeStyles, createMuiTheme, Toolbar, Button, Grid } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { InstagramOutlined, WhatsAppOutlined, CaretLeftOutlined } from '@ant-design/icons';
+import { InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 const theme = createMuiTheme({
