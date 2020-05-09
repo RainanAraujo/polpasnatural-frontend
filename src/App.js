@@ -162,7 +162,7 @@ function App() {
                       </Grid>
 
                       <Grid className="gridMenuButtons">
-                        <Button style={{ backgroundColor: "#F2B705", paddingLeft: 40, paddingRight: 40, borderRadius: 70 }}>
+                        <Button href="https://api.whatsapp.com/send?phone=99988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!" style={{ backgroundColor: "#F2B705", paddingLeft: 40, paddingRight: 40, borderRadius: 70, marginRight: 10 }}>
                           <text style={{ color: "#bf0413", fontSize: "2.3rem" }}>FAÇA SEU PEDIDO</text>
                         </Button>
                         <IconButton href="https://www.instagram.com/polpafrutanatural/" style={{ backgroundColor: "#F2B705", marginRight: 20 }} >
