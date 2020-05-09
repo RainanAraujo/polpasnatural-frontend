@@ -23,7 +23,9 @@ export default function Carrousel() {
             <div style={{ width: "100%" }}>
 
                 <CarouselProvider
-                    totalSlides={3}
+                    naturalSlideWidth={100}
+                    naturalSlideHeight={30}
+                    totalSlides={7}
                     isPlaying={true}
                     playDirection={"forward"}
                     interval={3500}
@@ -71,23 +73,35 @@ export default function Carrousel() {
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
                                                 margin: 10,
+                                                height: 300,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
+                                                paddingTop: 10,
                                                 borderRadius: 30
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>ACEROLA</text>
-                                            <img src={pactAcerola} />
+                                            <img src={pactAcerola} style={{ width: 250 }} />
                                         </Grid>
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 145,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
 
                                     </Grid>
+                                </Grid>
+                            </Slide>
+                            <Slide index={1} >
+                                <Grid style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    position: "static"
+                                }}
+                                    justify="space-around" >
+
                                     <Grid style={{
                                         display: "flex",
                                         justifyContent: "center",
@@ -104,22 +118,33 @@ export default function Carrousel() {
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
                                                 margin: 10,
+                                                height: 300,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
+                                                paddingTop: 10,
                                                 borderRadius: 30
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>MARACUJÁ</text>
-                                            <img src={pactMaracuja} />
+                                            <img src={pactMaracuja} style={{ width: 250 }} />
                                         </Grid>
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 145,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
                                     </Grid>
+                                </Grid>
+                            </Slide>
+                            <Slide index={3} >
+                                <Grid style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    position: "static"
+                                }}
+                                    justify="space-around" >
                                     <Grid style={{
                                         display: "flex",
                                         justifyContent: "center",
@@ -135,18 +160,19 @@ export default function Carrousel() {
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
                                                 margin: 10,
+                                                height: 300,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
+                                                paddingTop: 10,
                                                 borderRadius: 30
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>GOIABA</text>
-                                            <img src={pactGoiaba} />
+                                            <img src={pactGoiaba} style={{ width: 250 }} />
                                         </Grid>
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 145,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -154,7 +180,7 @@ export default function Carrousel() {
 
                                 </Grid>
                             </Slide>
-                            <Slide index={1}>
+                            <Slide index={4}>
                                 <Grid style={{
                                     display: "flex",
                                     justifyContent: "center",
@@ -177,89 +203,79 @@ export default function Carrousel() {
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
                                                 margin: 10,
+                                                height: 300,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
+                                                paddingTop: 10,
                                                 borderRadius: 30
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>CAJÁ</text>
-                                            <img src={pactCaja} />
+                                            <img src={pactCaja} style={{ width: 250 }} />
                                         </Grid>
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 145,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
 
                                     </Grid>
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>AÇAÍ</text>
-                                            <img src={pactAcai} style={{ width: 500 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 205,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                    </Grid>
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>CUPUAÇU</text>
-                                            <img src={pactCupuacu} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 205,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                    </Grid>
-
                                 </Grid>
                             </Slide>
-                            <Slide index={2}>
+                            <Slide index={5}>
+                                <Grid style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    position: "static"
+                                }}
+                                    justify="space-around">
+                                    <Grid style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        flexDirection: "column",
+                                        marginBottom: 30
+                                    }}>
+
+                                        <Grid style={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            flexDirection: "column",
+                                            marginBottom: 30
+                                        }}>
+                                            <Grid
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                    backgroundColor: "#fff",
+                                                    flexDirection: "column",
+                                                    margin: 10,
+                                                    height: 300,
+                                                    marginBottom: 20,
+                                                    paddingTop: 10,
+                                                    borderRadius: 30
+                                                }}
+                                            >
+                                                <text style={{ fontSize: "30px", color: "#5a9216" }}>AÇAÍ</text>
+                                                <img src={pactAcai} style={{ width: 250 }} />
+                                            </Grid>
+                                            <Button style={{
+                                                backgroundColor: "#F2B705",
+                                                position: "absolute",
+                                                marginTop: 145,
+                                                width: 250,
+                                                borderRadius: 50
+                                            }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
+                                        </Grid>
+
+                                    </Grid>
+                                </Grid>
+                            </Slide>
+                            <Slide index={6}>
                                 <Grid style={{
                                     display: "flex",
                                     justifyContent: "center",
@@ -282,18 +298,62 @@ export default function Carrousel() {
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
                                                 margin: 10,
+                                                height: 300,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
+                                                paddingTop: 10,
                                                 borderRadius: 30
                                             }}
                                         >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>TAMARINDO</text>
-                                            <img src={pactTamarindo} />
+                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>CUPUAÇU</text>
+                                            <img src={pactCupuacu} style={{ width: 250 }} />
                                         </Grid>
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 145,
+                                            width: 250,
+                                            borderRadius: 50
+                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
+                                    </Grid>
+
+                                </Grid>
+                            </Slide>
+                            <Slide index={7}>
+                                <Grid style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                    position: "static"
+                                }}
+                                    justify="space-around">
+                                    <Grid style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        flexDirection: "column",
+                                        marginBottom: 30
+                                    }}>
+                                        <Grid
+                                            style={{
+                                                display: "flex",
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                                backgroundColor: "#fff",
+                                                flexDirection: "column",
+                                                margin: 10,
+                                                height: 300,
+                                                marginBottom: 20,
+                                                paddingTop: 10,
+                                                borderRadius: 30
+                                            }}
+                                        >
+                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>TAMARINDO</text>
+                                            <img src={pactTamarindo} style={{ width: 250 }} />
+                                        </Grid>
+                                        <Button style={{
+                                            backgroundColor: "#F2B705",
+                                            position: "absolute",
+                                            marginTop: 145,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>

@@ -16,10 +16,11 @@
     "react-bootstrap-carousel": "^4.0.3",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-scroll": "^1.7.16"
   },
   "engines": {
-    "node": "13.10.1",
+    "node": "13.13.0",
     "npm": "6.14.2"
   },
   "scripts": {
