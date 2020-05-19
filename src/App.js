@@ -125,18 +125,18 @@ function App() {
                   <Grid className="gridContainer" container >
                     <Grid style={{
                       height: "10vh",
-                      width: "30%",
+                      width: "20%",
                       alignItems: "center",
                       backgroundColor: "#fff",
                       display: "flex",
                       justifyContent: "center",
                       marginRight: 30
                     }}>
-                      <img src={LogoP} style={{ height: "80%", paddingRight: 20 }} />
+                      <img src={LogoP} style={{ height: "60%", paddingRight: 10 }} />
                     </Grid>
                     <Grid className={classes.containerDesktop} justify="space-between">
                       <Grid style={{
-                        height: "100%",
+                        height: "10vh",
                         flexDirection: "row",
                         display: "flex",
                         justifyContent: "center",

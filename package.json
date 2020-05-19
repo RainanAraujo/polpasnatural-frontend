@@ -20,7 +20,7 @@
     "react-scroll": "^1.7.16"
   },
   "engines": {
-    "node": "13.13.0",
+    "node": "14.2.0",
     "npm": "6.14.2"
   },
   "scripts": {

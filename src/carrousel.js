@@ -34,8 +34,8 @@ export default function Carrousel() {
                         display: "flex",
                         alignItems: "center",
                         position: "relative",
-                        marginLeft: 30,
-                        marginRight: 30
+                        marginLeft: 0,
+                        marginRight: 0
                     }}
 
                         justify="space-around">
@@ -53,7 +53,7 @@ export default function Carrousel() {
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    position: "static"
+                                    position: "static",
                                 }}
                                     justify="space-around" >
                                     <Grid style={{
@@ -70,10 +70,10 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>ACEROLA</text>
@@ -82,7 +82,7 @@ export default function Carrousel() {
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -103,10 +103,10 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>MARACUJÁ</text>
@@ -115,7 +115,7 @@ export default function Carrousel() {
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -134,10 +134,10 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>GOIABA</text>
@@ -146,7 +146,7 @@ export default function Carrousel() {
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -176,10 +176,10 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>CAJÁ</text>
@@ -188,7 +188,7 @@ export default function Carrousel() {
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -208,19 +208,19 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>AÇAÍ</text>
-                                            <img src={pactAcai} style={{ width: 500 }} />
+                                            <img src={pactAcai}/>
                                         </Grid>
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -239,10 +239,10 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>CUPUAÇU</text>
@@ -251,7 +251,7 @@ export default function Carrousel() {
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
@@ -281,10 +281,10 @@ export default function Carrousel() {
                                                 alignItems: "center",
                                                 backgroundColor: "#fff",
                                                 flexDirection: "column",
-                                                margin: 10,
                                                 marginBottom: 20,
-                                                paddingTop: 50,
-                                                borderRadius: 30
+                                                paddingTop: 40,
+                                                borderRadius: 30,
+                                                width: "70%",
                                             }}
                                         >
                                             <text style={{ fontSize: "30px", color: "#5a9216" }}>TAMARINDO</text>
@@ -293,7 +293,7 @@ export default function Carrousel() {
                                         <Button style={{
                                             backgroundColor: "#F2B705",
                                             position: "absolute",
-                                            marginTop: 205,
+                                            marginTop: 170,
                                             width: 250,
                                             borderRadius: 50
                                         }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
