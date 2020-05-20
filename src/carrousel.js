@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Skeleton } from "@material-ui/lab";
 import {
   CarouselProvider,
   Slider,
@@ -52,15 +53,45 @@ const useStyles = makeStyles({
 
 export default function Carrousel() {
   const classes = useStyles();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.onload = setLoading(false);
+    });
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  function ComponentSkeleton(props) {
+    return (
+      <Skeleton
+        variant={props.variant}
+        height={props.height}
+        width={props.width}
+      />
+    );
+  }
+
   function SlideComponent(props) {
     return (
       <Grid className={classes.ContainerChild}>
         <Grid className={classes.ContainerSlide}>
-          <text style={{ fontSize: "30px", color: "#5a9216" }}>
-            {props.nameTitle}
-          </text>
-          <img src={props.nameImage} />
+          {loading && (
+            <ComponentSkeleton variant={"text"} width={170} height={35} />
+          )}
+          {!loading && (
+            <text style={{ fontSize: "30px", color: "#5a9216" }}>
+              {props.nameTitle}
+            </text>
+          )}
+          {loading && (
+            <ComponentSkeleton variant={"rect"} width={414} height={227} />
+          )}
+          {!loading && <img src={props.nameImage} />}
         </Grid>
+
         <Button
           style={{
             backgroundColor: "#F2B705",
@@ -70,7 +101,12 @@ export default function Carrousel() {
             borderRadius: 50,
           }}
         >
-          <text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text>
+          {loading && (
+            <ComponentSkeleton variant={"text"} width={140} height={43} />
+          )}
+          {!loading && (
+            <text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text>
+          )}
         </Button>
       </Grid>
     );

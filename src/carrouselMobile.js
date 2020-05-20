@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Skeleton } from "@material-ui/lab";
 import {
   CarouselProvider,
   Slider,
@@ -52,15 +53,44 @@ const useStyles = makeStyles({
 });
 export default function Carrousel() {
   const classes = useStyles();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  function ComponentSkeleton(props) {
+    return (
+      <Skeleton
+        variant={props.variant}
+        height={props.height}
+        width={props.width}
+      />
+    );
+  }
+
   function SlideComponent(props) {
     return (
       <Grid className={classes.ContainerChild} justify="space-around">
         <Grid className={classes.ContainerChild}>
           <Grid className={classes.ContainerSlide}>
-            <text style={{ fontSize: "20px", color: "#5a9216" }}>
-              {props.NameTitle}
-            </text>
-            <img src={props.NameImage} style={{ width: 250 }} />
+            {loading && (
+              <ComponentSkeleton variant={"text"} width={170} height={24} />
+            )}
+            {!loading && (
+              <text style={{ fontSize: "20px", color: "#5a9216" }}>
+                {props.NameTitle}
+              </text>
+            )}
+            {loading && (
+              <ComponentSkeleton variant={"rect"} width={250} height={166} />
+            )}
+            {!loading && <img src={props.NameImage} style={{ width: 250 }} />}
           </Grid>
           <Button
             style={{
@@ -71,7 +101,12 @@ export default function Carrousel() {
               borderRadius: 50,
             }}
           >
-            <text style={{ color: "#b91400", fontSize: 20 }}>BENEFÍCIOS</text>
+            {loading && (
+              <ComponentSkeleton variant={"text"} width={112} height={35} />
+            )}
+            {!loading && (
+              <text style={{ color: "#b91400", fontSize: 20 }}>BENEFÍCIOS</text>
+            )}
           </Button>
         </Grid>
       </Grid>
