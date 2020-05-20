@@ -16,7 +16,7 @@ export default function CarrouselBaners() {
   }, []);
 
   function ComponentSkeleton() {
-    return <Skeleton variant="rect" height={"84vh"} width={"100%"} />;
+    return <Skeleton variant="rect" height={"40vh"} width={"100%"} />;
   }
 
   return (

@@ -106,7 +106,6 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  window.onload = alert("CARREGADA");
   var scrollInicio = function () {
     window.scrollTo(0, 0);
   };
