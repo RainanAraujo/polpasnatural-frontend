@@ -1,53 +1,59 @@
-import React from 'react';
-import './App.css';
-import { AppBar, Drawer, makeStyles, createMuiTheme, IconButton, Button, Grid, MenuItem, Menu, Badge, Link } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import { ThemeProvider } from '@material-ui/styles';
-import { InstagramOutlined, WhatsAppOutlined, FacebookOutlined } from '@ant-design/icons';
-import { CarouselProvider, Slider, Slide, Image } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import LogoP from "../src/img/iconp.png"
-import LogoG from "../src/img/logog.png"
-import Slide1 from "../src/img/slide.png"
-import Slide2 from "../src/img/slide2.png"
-import MenuButton from "./draw"
-import Carrousel from "./carrousel"
-import CarrouselMobile from "./carrouselMobile"
-
+import React from "react";
+import "./App.css";
+import {
+  AppBar,
+  makeStyles,
+  createMuiTheme,
+  IconButton,
+  Button,
+  Grid,
+} from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/styles";
+import {
+  InstagramOutlined,
+  WhatsAppOutlined,
+  FacebookOutlined,
+} from "@ant-design/icons";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import LogoP from "../src/img/iconp.png";
+import LogoG from "../src/img/logog.png";
+import MenuButton from "./draw";
+import Carrousel from "./carrousel";
+import CarrouselMobile from "./carrouselMobile";
+import CarrouselBaners from "./carrouselBaners";
 const theme = createMuiTheme({
-
   palette: {
     primary: {
-      main: "#b91400"
+      main: "#b91400",
     },
     secondary: {
       // This is green.A700 as hex.
-      main: '#ffffff',
+      main: "#ffffff",
     },
   },
 });
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "#bf0413",
     alignItems: "center",
-    background: 'transparent',
+    background: "transparent",
   },
   grow: {
     flexGrow: 1,
   },
   containerDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
       flexGrow: 1,
-      display: 'flex',
+      display: "flex",
       flexDirection: "row",
       alignItems: "center",
     },
   },
   textDefault: {
     fontSize: "2.3rem",
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       fontSize: "3.6rem",
     },
   },
@@ -55,49 +61,46 @@ const useStyles = makeStyles(theme => ({
   div1: {
     backgroundColor: "#f2b705",
     width: "100%",
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
   },
   div2: {
     backgroundColor: "#bf0413",
     width: "100%",
-
   },
   div3: {
     backgroundColor: "#f2b705",
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
-    alignItems: "center"
-
+    alignItems: "center",
   },
   footer: {
-    background: '#fff',
+    background: "#fff",
   },
   sectionMobile: {
-    display: 'flex',
+    display: "flex",
     flexGrow: 1,
     alignItems: "center",
 
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    [theme.breakpoints.up("md")]: {
+      display: "none",
     },
   },
   footerContent: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up("md")]: {
       flexGrow: 1,
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
-      padding: 20
+      padding: 20,
     },
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: 20
-  }
-
+    padding: 20,
+  },
 }));
 
 function App() {
@@ -113,71 +116,135 @@ function App() {
 
   return (
     <div className="App">
-      <header >
-      </header>
+      <header></header>
 
       <body>
         <div>
           <div>
-            <div className={classes.grow} >
+            <div className={classes.grow}>
               <ThemeProvider theme={theme}>
-                <AppBar elevation={3} className={classes.appBar} position="fixed" >
-                  <Grid className="gridContainer" container >
-                    <Grid style={{
-                      height: "10vh",
-                      width: "20%",
-                      alignItems: "center",
-                      backgroundColor: "#fff",
-                      display: "flex",
-                      justifyContent: "center",
-                      marginRight: 30
-                    }}>
-                      <img src={LogoP} style={{ height: "60%", paddingRight: 10 }} />
-                    </Grid>
-                    <Grid className={classes.containerDesktop} justify="space-between">
-                      <Grid style={{
+                <AppBar
+                  elevation={3}
+                  className={classes.appBar}
+                  position="fixed"
+                >
+                  <Grid className="gridContainer" container>
+                    <Grid
+                      style={{
                         height: "10vh",
-                        flexDirection: "row",
+                        width: "20%",
+                        alignItems: "center",
+                        backgroundColor: "#fff",
                         display: "flex",
                         justifyContent: "center",
-                        alignItems: "center"
-                      }}>
+                        marginRight: 30,
+                      }}
+                    >
+                      <img
+                        src={LogoP}
+                        style={{ height: "60%", paddingRight: 10 }}
+                      />
+                    </Grid>
+                    <Grid
+                      className={classes.containerDesktop}
+                      justify="space-between"
+                    >
+                      <Grid
+                        style={{
+                          height: "10vh",
+                          flexDirection: "row",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
                         <Grid className="gridMenuButtonsText">
-                          <Button onClick={scrollInicio} >
-                            <text style={{
-                              fontSize: "2.6rem"
-                            }}>INÍCIO</text>
+                          <Button onClick={scrollInicio}>
+                            <text
+                              style={{
+                                fontSize: "2.6rem",
+                              }}
+                            >
+                              INÍCIO
+                            </text>
                           </Button>
-                          <Button >
-                            <text style={{
-                              fontSize: "2.6rem"
-                            }}>CONHEÇA-NOS</text>
+                          <Button>
+                            <text
+                              style={{
+                                fontSize: "2.6rem",
+                              }}
+                            >
+                              CONHEÇA-NOS
+                            </text>
                           </Button>
                           <Button onClick={scrollContato}>
-                            <text style={{
-                              fontSize: "2.6rem"
-                            }}>CONTATO</text>
+                            <text
+                              style={{
+                                fontSize: "2.6rem",
+                              }}
+                            >
+                              CONTATO
+                            </text>
                           </Button>
                         </Grid>
                       </Grid>
 
                       <Grid className="gridMenuButtons">
-                        <Button href="https://api.whatsapp.com/send?phone=+5599988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!" style={{ backgroundColor: "#F2B705", paddingLeft: 40, paddingRight: 40, borderRadius: 70, marginRight: 10 }}>
-                          <text style={{ color: "#bf0413", fontSize: "2.3rem" }}>FAÇA SEU PEDIDO</text>
+                        <Button
+                          href="https://api.whatsapp.com/send?phone=+5599988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!"
+                          style={{
+                            backgroundColor: "#F2B705",
+                            paddingLeft: 40,
+                            paddingRight: 40,
+                            borderRadius: 70,
+                            marginRight: 10,
+                          }}
+                        >
+                          <text
+                            style={{ color: "#bf0413", fontSize: "2.3rem" }}
+                          >
+                            FAÇA SEU PEDIDO
+                          </text>
                         </Button>
-                        <IconButton href="https://www.instagram.com/polpafrutanatural/" style={{ backgroundColor: "#F2B705", marginRight: 20 }} >
-                          <InstagramOutlined style={{ fontSize: 20, color: "#bf0413" }} />
+                        <IconButton
+                          href="https://www.instagram.com/polpafrutanatural/"
+                          style={{
+                            backgroundColor: "#F2B705",
+                            marginRight: 20,
+                          }}
+                        >
+                          <InstagramOutlined
+                            style={{ fontSize: 20, color: "#bf0413" }}
+                          />
                         </IconButton>
-                        <IconButton href="" style={{ backgroundColor: "#F2B705", marginRight: 20 }}>
-                          <WhatsAppOutlined style={{ fontSize: 20, color: "#bf0413" }} />
+                        <IconButton
+                          href=""
+                          style={{
+                            backgroundColor: "#F2B705",
+                            marginRight: 20,
+                          }}
+                        >
+                          <WhatsAppOutlined
+                            style={{ fontSize: 20, color: "#bf0413" }}
+                          />
                         </IconButton>
-                        <IconButton href="" style={{ backgroundColor: "#F2B705", marginRight: 20 }}>
-                          <FacebookOutlined style={{ fontSize: 20, color: "#bf0413" }} />
+                        <IconButton
+                          href=""
+                          style={{
+                            backgroundColor: "#F2B705",
+                            marginRight: 20,
+                          }}
+                        >
+                          <FacebookOutlined
+                            style={{ fontSize: 20, color: "#bf0413" }}
+                          />
                         </IconButton>
-
                       </Grid>
                     </Grid>
-                    <Grid className={classes.sectionMobile} justify="space-around">
+                    <Grid
+                      className={classes.sectionMobile}
+                      justify="space-around"
+                    >
                       <Button
                         href="https://api.whatsapp.com/send?phone=+5599988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!"
                         style={{
@@ -185,8 +252,11 @@ function App() {
                           borderRadius: 10,
                           alignItems: "center",
                           marginRight: 10,
-                        }}>
-                        <text style={{ color: "#bf0413", fontSize: "1.5rem" }}>FAÇA SEU PEDIDO</text>
+                        }}
+                      >
+                        <text style={{ color: "#bf0413", fontSize: "1.5rem" }}>
+                          FAÇA SEU PEDIDO
+                        </text>
                       </Button>
                       <MenuButton />
                     </Grid>
@@ -194,47 +264,21 @@ function App() {
                 </AppBar>
               </ThemeProvider>
             </div>
-            <div style={{ height: "10vh" }}>
-
-            </div>
-            <div style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }} >
-              <div style={{ width: "100%" }}>
-                <CarouselProvider
-                  naturalSlideWidth={100}
-                  naturalSlideHeight={30}
-                  totalSlides={2}
-                  isPlaying={true}
-                  playDirection={"forward"}
-                  interval={3500}
-                  infinite={true}
-                  isIntrinsicHeight={true}
-                >
-                  <Slider>
-                    <Slide index={0} >
-                      <Image src={Slide1} />
-                    </Slide>
-                    <Slide index={1}>
-                      <Image src={Slide2} />
-                    </Slide>
-                  </Slider>
-                </CarouselProvider>
-              </div>
-            </div>
+            <CarrouselBaners />
             <Grid className={classes.div1}>
-              <Grid style={{
-                width: "40%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#fff"
-              }} >
-
-                <img src={LogoP} style={{ width: "70%", padding: 20, paddingRight: 30 }} />
+              <Grid
+                style={{
+                  width: "40%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "#fff",
+                }}
+              >
+                <img
+                  src={LogoP}
+                  style={{ width: "70%", padding: 20, paddingRight: 30 }}
+                />
               </Grid>
               <Grid
                 style={{
@@ -244,99 +288,144 @@ function App() {
                   alignItems: "center",
                 }}
               >
-                <Button style={{ color: "#fff", borderRadius: 20 }} >
+                <Button style={{ color: "#fff", borderRadius: 20 }}>
                   <b className={classes.textDefault}>CONHEÇA-NOS</b>
                 </Button>
               </Grid>
-
             </Grid>
             <div className={classes.div2}>
-              <Grid style={{
-                height: "13vh",
-                width: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                display: "flex"
-              }}>
-                <b className={classes.textDefault} style={{ color: "#fff" }}>NOSSAS POLPAS</b>
+              <Grid
+                style={{
+                  height: "13vh",
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                }}
+              >
+                <b className={classes.textDefault} style={{ color: "#fff" }}>
+                  NOSSAS POLPAS
+                </b>
               </Grid>
-              <Grid className={classes.containerDesktop} >
+              <Grid className={classes.containerDesktop}>
                 <Carrousel />
               </Grid>
               <Grid className={classes.sectionMobile}>
                 <CarrouselMobile />
               </Grid>
-
-
             </div>
             <div className={classes.div3}>
-              <Grid style={{
-                width: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                display: "flex"
-              }}>
-
-              </Grid>
-
-            </div>
-          </div>
-          <Grid style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-            backgroundColor: "#fff",
-            paddingBottom: 10
-
-          }}>
-            <Grid className={classes.footerContent}
-              justify="space-around">
-              <Grid style={{
-                width: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                display: "flex",
-                marginTop: 30
-              }}
-              >
-                <Grid style={{
-                  width: "70%",
+              <Grid
+                style={{
+                  width: "100%",
                   alignItems: "center",
                   justifyContent: "center",
-                  display: "flex"
-                }}>
+                  flexDirection: "column",
+                  display: "flex",
+                }}
+              ></Grid>
+            </div>
+          </div>
+          <Grid
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              backgroundColor: "#fff",
+              paddingBottom: 10,
+            }}
+          >
+            <Grid className={classes.footerContent} justify="space-around">
+              <Grid
+                style={{
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                  marginTop: 30,
+                }}
+              >
+                <Grid
+                  style={{
+                    width: "70%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    display: "flex",
+                  }}
+                >
                   <img src={LogoG} style={{ width: "80%" }} />
                 </Grid>
-
               </Grid>
 
-              <Grid style={{
-                width: "100%",
-                alignItems: "center",
-                justifyContent: "center",
-                display: "flex",
-                flexDirection: "column",
-                marginTop: 30
-              }}>
-                <b style={{ color: "#4b830d", fontSize: 25, marginBottom: 40 }}>CONTATO</b>
-                <text style={{ fontSize: 22, marginBottom: 9, textAlign: "center" }}>AV. Bonfim nº444</text>
-                <text style={{ fontSize: 22, marginBottom: 9, textAlign: "center" }}>Bairro Augusto Luna</text>
-                <text style={{ fontSize: 22, marginBottom: 9, textAlign: "center" }}>CEP:657500000</text>
-                <text style={{ fontSize: 22, marginBottom: 20, textAlign: "center" }}>Esperantinópolis-MA</text>
-                <text style={{ fontSize: 22, marginBottom: 5, textAlign: "center" }}><b>Whatsaap:</b> [99]98812 5040</text>
-                <text style={{ fontSize: 22, marginBottom: 20, textAlign: "center" }}><b>Whatsaap:</b> [99]99903 0673</text>
-                <text style={{ fontSize: 22, marginBottom: 15, textAlign: "center" }}><b>E-mail:</b> contato@polpasnatural.com.br</text>
-
+              <Grid
+                style={{
+                  width: "100%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  marginTop: 30,
+                }}
+              >
+                <b style={{ color: "#4b830d", fontSize: 25, marginBottom: 40 }}>
+                  CONTATO
+                </b>
+                <text
+                  style={{ fontSize: 22, marginBottom: 9, textAlign: "center" }}
+                >
+                  AV. Bonfim nº444
+                </text>
+                <text
+                  style={{ fontSize: 22, marginBottom: 9, textAlign: "center" }}
+                >
+                  Bairro Augusto Luna
+                </text>
+                <text
+                  style={{ fontSize: 22, marginBottom: 9, textAlign: "center" }}
+                >
+                  CEP:657500000
+                </text>
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  Esperantinópolis-MA
+                </text>
+                <text
+                  style={{ fontSize: 22, marginBottom: 5, textAlign: "center" }}
+                >
+                  <b>Whatsaap:</b> [99]98812 5040
+                </text>
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  <b>Whatsaap:</b> [99]99903 0673
+                </text>
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 15,
+                    textAlign: "center",
+                  }}
+                >
+                  <b>E-mail:</b> contato@polpasnatural.com.br
+                </text>
               </Grid>
             </Grid>
-            <text style={{ textAlign: "center", fontSize: "1.6rem" }}>Agência KERA © 2020 - Todos os direitos reservados</text>
+            <text style={{ textAlign: "center", fontSize: "1.6rem" }}>
+              Agência KERA © 2020 - Todos os direitos reservados
+            </text>
           </Grid>
-
         </div>
       </body>
-    </div >
-
+    </div>
   );
 }
 

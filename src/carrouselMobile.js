@@ -1,382 +1,147 @@
-import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import { Grid, Button } from '@material-ui/core';
-import pactAcai from "../src/img/pactAcai.png"
-import pactAcerola from "../src/img/pactAcerola.png"
-import pactCaja from "../src/img/pactCaja.png"
-import pactCupuacu from "../src/img/pactCupuacu.png"
-import pactGoiaba from "../src/img/pactGoiaba.png"
-import pactMaracuja from "../src/img/pactMaracuja.png"
-import pactTamarindo from "../src/img/pactTamarindo.png"
-import { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
+import React from "react";
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from "pure-react-carousel";
+import "pure-react-carousel/dist/react-carousel.es.css";
+import { Grid, Button, makeStyles } from "@material-ui/core";
+import pactAcai from "../src/img/pactAcai.png";
+import pactAcerola from "../src/img/pactAcerola.png";
+import pactCaja from "../src/img/pactCaja.png";
+import pactCupuacu from "../src/img/pactCupuacu.png";
+import pactGoiaba from "../src/img/pactGoiaba.png";
+import pactMaracuja from "../src/img/pactMaracuja.png";
+import pactTamarindo from "../src/img/pactTamarindo.png";
+import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
+const useStyles = makeStyles({
+  ContainerMain: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "static",
+  },
+  ContainerChild: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    marginBottom: 30,
+  },
+  ButtonsNextAndBack: {
+    backgroundColor: "#f2b705",
+    borderRadius: 50,
+    border: "none",
+    margin: 10,
+  },
+  ContainerSlide: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    flexDirection: "column",
+    margin: 10,
+    height: 250,
+    width: "70%",
+    marginBottom: 20,
+    paddingTop: 10,
+    borderRadius: 30,
+  },
+});
 export default function Carrousel() {
-
-
+  const classes = useStyles();
+  function SlideComponent(props) {
     return (
-        <div style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-        }} >
-            <div style={{ width: "100%" }}>
+      <Grid className={classes.ContainerChild} justify="space-around">
+        <Grid className={classes.ContainerChild}>
+          <Grid className={classes.ContainerSlide}>
+            <text style={{ fontSize: "20px", color: "#5a9216" }}>
+              {props.NameTitle}
+            </text>
+            <img src={props.NameImage} style={{ width: 250 }} />
+          </Grid>
+          <Button
+            style={{
+              backgroundColor: "#F2B705",
+              position: "absolute",
+              marginTop: 115,
+              width: 200,
+              borderRadius: 50,
+            }}
+          >
+            <text style={{ color: "#b91400", fontSize: 20 }}>BENEFÍCIOS</text>
+          </Button>
+        </Grid>
+      </Grid>
+    );
+  }
 
-                <CarouselProvider
-                    naturalSlideWidth={100}
-                    naturalSlideHeight={30}
-                    totalSlides={7}
-                    isPlaying={true}
-                    playDirection={"forward"}
-                    interval={3500}
-                    infinite={true}
-                    isIntrinsicHeight={true}
-                >
-                    <Grid style={{
-                        display: "flex",
-                        alignItems: "center",
-                        position: "relative",
-                        marginLeft: 30,
-                        marginRight: 30
-                    }}
+  return (
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div style={{ width: "100%" }}>
+        <CarouselProvider
+          naturalSlideWidth={100}
+          naturalSlideHeight={30}
+          totalSlides={7}
+          isPlaying={true}
+          playDirection={"forward"}
+          interval={3500}
+          infinite={true}
+          isIntrinsicHeight={true}
+        >
+          <Grid
+            style={{
+              display: "flex",
+              alignItems: "center",
+              position: "relative",
+            }}
+            justify="space-around"
+          >
+            <ButtonBack className={classes.ButtonsNextAndBack}>
+              <LeftCircleOutlined style={{ fontSize: 40, color: "#fff" }} />
+            </ButtonBack>
+            <Slider>
+              <Slide index={0}>
+                <SlideComponent NameTitle="ACEROLA" NameImage={pactAcerola} />
+              </Slide>
+              <Slide index={1}>
+                <SlideComponent NameTitle="MARACUJÁ" NameImage={pactMaracuja} />
+              </Slide>
+              <Slide index={3}>
+                <SlideComponent NameTitle="GOIABA" NameImage={pactGoiaba} />
+              </Slide>
+              <Slide index={4}>
+                <SlideComponent NameTitle="CAJÁ" NameImage={pactCaja} />
+              </Slide>
+              <Slide index={5}>
+                <SlideComponent NameTitle="AÇAI" NameImage={pactAcai} />
+              </Slide>
+              <Slide index={6}>
+                <SlideComponent NameTitle="CUPUAÇU" NameImage={pactCupuacu} />
+              </Slide>
+              <Slide index={7}>
+                <SlideComponent
+                  NameTitle="TAMARINDO"
+                  NameImage={pactTamarindo}
+                />
+              </Slide>
+            </Slider>
 
-                        justify="space-around">
-
-                        <ButtonBack style={{
-                            backgroundColor: "#f2b705",
-                            borderRadius: 50,
-
-                        }}>
-                            <LeftCircleOutlined style={{ fontSize: 40, color: "#fff" }} />
-                        </ButtonBack>
-                        <Slider>
-                            <Slide index={0} >
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around" >
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                height: 300,
-                                                marginBottom: 20,
-                                                paddingTop: 10,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>ACEROLA</text>
-                                            <img src={pactAcerola} style={{ width: 250 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 145,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-
-                                    </Grid>
-                                </Grid>
-                            </Slide>
-                            <Slide index={1} >
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around" >
-
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30,
-
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                height: 300,
-                                                marginBottom: 20,
-                                                paddingTop: 10,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>MARACUJÁ</text>
-                                            <img src={pactMaracuja} style={{ width: 250 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 145,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                    </Grid>
-                                </Grid>
-                            </Slide>
-                            <Slide index={3} >
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around" >
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                height: 300,
-                                                marginBottom: 20,
-                                                paddingTop: 10,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>GOIABA</text>
-                                            <img src={pactGoiaba} style={{ width: 250 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 145,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                    </Grid>
-
-                                </Grid>
-                            </Slide>
-                            <Slide index={4}>
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around">
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                height: 300,
-                                                marginBottom: 20,
-                                                paddingTop: 10,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>CAJÁ</text>
-                                            <img src={pactCaja} style={{ width: 250 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 145,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-
-                                    </Grid>
-                                </Grid>
-                            </Slide>
-                            <Slide index={5}>
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around">
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-
-                                        <Grid style={{
-                                            display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                            flexDirection: "column",
-                                            marginBottom: 30
-                                        }}>
-                                            <Grid
-                                                style={{
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center",
-                                                    backgroundColor: "#fff",
-                                                    flexDirection: "column",
-                                                    margin: 10,
-                                                    height: 300,
-                                                    marginBottom: 20,
-                                                    paddingTop: 10,
-                                                    borderRadius: 30
-                                                }}
-                                            >
-                                                <text style={{ fontSize: "30px", color: "#5a9216" }}>AÇAÍ</text>
-                                                <img src={pactAcai} style={{ width: 250 }} />
-                                            </Grid>
-                                            <Button style={{
-                                                backgroundColor: "#F2B705",
-                                                position: "absolute",
-                                                marginTop: 145,
-                                                width: 250,
-                                                borderRadius: 50
-                                            }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                        </Grid>
-
-                                    </Grid>
-                                </Grid>
-                            </Slide>
-                            <Slide index={6}>
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around">
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                height: 300,
-                                                marginBottom: 20,
-                                                paddingTop: 10,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>CUPUAÇU</text>
-                                            <img src={pactCupuacu} style={{ width: 250 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 145,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                    </Grid>
-
-                                </Grid>
-                            </Slide>
-                            <Slide index={7}>
-                                <Grid style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    position: "static"
-                                }}
-                                    justify="space-around">
-                                    <Grid style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        flexDirection: "column",
-                                        marginBottom: 30
-                                    }}>
-                                        <Grid
-                                            style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center",
-                                                backgroundColor: "#fff",
-                                                flexDirection: "column",
-                                                margin: 10,
-                                                height: 300,
-                                                marginBottom: 20,
-                                                paddingTop: 10,
-                                                borderRadius: 30
-                                            }}
-                                        >
-                                            <text style={{ fontSize: "30px", color: "#5a9216" }}>TAMARINDO</text>
-                                            <img src={pactTamarindo} style={{ width: 250 }} />
-                                        </Grid>
-                                        <Button style={{
-                                            backgroundColor: "#F2B705",
-                                            position: "absolute",
-                                            marginTop: 145,
-                                            width: 250,
-                                            borderRadius: 50
-                                        }}><text style={{ color: "#b91400", fontSize: 25 }}>BENEFÍCIOS</text></Button>
-                                    </Grid>
-
-
-                                </Grid>
-                            </Slide>
-                        </Slider>
-
-
-
-                        <ButtonNext style={{
-                            backgroundColor: "#f2b705",
-                            borderRadius: 50,
-                        }}>
-                            <RightCircleOutlined style={{ fontSize: 40, color: "#fff" }} />
-                        </ButtonNext>
-
-                    </Grid>
-
-                </CarouselProvider>
-            </div>
-        </div>
-    )
+            <ButtonNext className={classes.ButtonsNextAndBack}>
+              <RightCircleOutlined style={{ fontSize: 40, color: "#fff" }} />
+            </ButtonNext>
+          </Grid>
+        </CarouselProvider>
+      </div>
+    </div>
+  );
 }
