@@ -9,25 +9,14 @@ export default function CarrouselBaners() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.onload = setLoading(false);
-    });
+      setLoading(false);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   function ComponentSkeleton() {
-    return (
-      <Grid
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-        }}
-        justify="center"
-      >
-        <Skeleton variant="rect" height={"84vh"} width={"100%"} />
-      </Grid>
-    );
+    return <Skeleton variant="rect" height={"84vh"} width={"100%"} />;
   }
 
   return (
