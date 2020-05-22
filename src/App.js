@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Skeleton } from "@material-ui/lab";
+import React from "react";
 import "./App.css";
 import {
   AppBar,
@@ -21,7 +20,8 @@ import LogoG from "../src/img/logog.png";
 import MenuButton from "./draw";
 import Carrousel from "./carrousel";
 import CarrouselMobile from "./carrouselMobile";
-import CarrouselBaners from "./carrouselBaners";
+import MainPanel from "./mainPanel";
+import SecondPanel from "./secondPanel";
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -59,13 +59,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  div1: {
-    backgroundColor: "#f2b705",
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
   div2: {
     backgroundColor: "#bf0413",
     width: "100%",
@@ -124,9 +117,9 @@ function App() {
             <div className={classes.grow}>
               <ThemeProvider theme={theme}>
                 <AppBar
+                  position="static"
                   elevation={3}
                   className={classes.appBar}
-                  position="fixed"
                 >
                   <Grid className="gridContainer" container>
                     <Grid
@@ -190,22 +183,6 @@ function App() {
                       </Grid>
 
                       <Grid className="gridMenuButtons">
-                        <Button
-                          href="https://api.whatsapp.com/send?phone=+5599988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!"
-                          style={{
-                            backgroundColor: "#F2B705",
-                            paddingLeft: 40,
-                            paddingRight: 40,
-                            borderRadius: 70,
-                            marginRight: 10,
-                          }}
-                        >
-                          <text
-                            style={{ color: "#bf0413", fontSize: "2.3rem" }}
-                          >
-                            FAÇA SEU PEDIDO
-                          </text>
-                        </Button>
                         <IconButton
                           href="https://www.instagram.com/polpafrutanatural/"
                           style={{
@@ -264,35 +241,8 @@ function App() {
                 </AppBar>
               </ThemeProvider>
             </div>
-            <CarrouselBaners />
-            <Grid className={classes.div1}>
-              <Grid
-                style={{
-                  width: "40%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "#fff",
-                }}
-              >
-                <img
-                  src={LogoP}
-                  style={{ width: "70%", padding: 20, paddingRight: 30 }}
-                />
-              </Grid>
-              <Grid
-                style={{
-                  flexGrow: 1,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Button style={{ color: "#fff", borderRadius: 20 }}>
-                  <b className={classes.textDefault}>CONHEÇA-NOS</b>
-                </Button>
-              </Grid>
-            </Grid>
+            <MainPanel />
+            <SecondPanel />
             <div className={classes.div2}>
               <Grid
                 style={{
