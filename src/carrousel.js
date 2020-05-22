@@ -58,8 +58,8 @@ export default function Carrousel() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+      window.onloadeddata = setLoading(false);
+    });
 
     return () => clearTimeout(timer);
   }, []);

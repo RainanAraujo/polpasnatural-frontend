@@ -9,8 +9,8 @@ export default function CarrouselBaners() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+      window.onloadeddata = setLoading(false);
+    });
 
     return () => clearTimeout(timer);
   }, []);
