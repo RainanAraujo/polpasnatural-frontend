@@ -114,35 +114,6 @@ function App() {
     window.scrollTo(0, 2000);
   };
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      window.onloadeddata = setLoading(false);
-    });
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  function ComponentSkeleton(props) {
-    return (
-      <Grid
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-        }}
-        justify="center"
-      >
-        <Skeleton
-          variant={props.variant}
-          height={props.height}
-          width={props.width}
-        />
-      </Grid>
-    );
-  }
-
   return (
     <div className="App">
       <header></header>
@@ -169,19 +140,10 @@ function App() {
                         marginRight: 30,
                       }}
                     >
-                      {loading && (
-                        <ComponentSkeleton
-                          variant={"rect"}
-                          width={63}
-                          height={54}
-                        />
-                      )}
-                      {!loading && (
-                        <img
-                          src={LogoP}
-                          style={{ height: "60%", paddingRight: 10 }}
-                        />
-                      )}
+                      <img
+                        src={LogoP}
+                        style={{ height: "60%", paddingRight: 10 }}
+                      />
                     </Grid>
                     <Grid
                       className={classes.containerDesktop}
@@ -198,58 +160,31 @@ function App() {
                       >
                         <Grid className="gridMenuButtonsText">
                           <Button onClick={scrollInicio}>
-                            {loading && (
-                              <ComponentSkeleton
-                                variant={"text"}
-                                width={76}
-                                height={45}
-                              />
-                            )}
-                            {!loading && (
-                              <text
-                                style={{
-                                  fontSize: "2.6rem",
-                                }}
-                              >
-                                INÍCIO
-                              </text>
-                            )}
+                            <text
+                              style={{
+                                fontSize: "2.6rem",
+                              }}
+                            >
+                              INÍCIO
+                            </text>
                           </Button>
                           <Button>
-                            {loading && (
-                              <ComponentSkeleton
-                                variant={"text"}
-                                width={182}
-                                height={45}
-                              />
-                            )}
-                            {!loading && (
-                              <text
-                                style={{
-                                  fontSize: "2.6rem",
-                                }}
-                              >
-                                CONHEÇA-NOS
-                              </text>
-                            )}
+                            <text
+                              style={{
+                                fontSize: "2.6rem",
+                              }}
+                            >
+                              CONHEÇA-NOS
+                            </text>
                           </Button>
                           <Button onClick={scrollContato}>
-                            {loading && (
-                              <ComponentSkeleton
-                                variant={"text"}
-                                width={117}
-                                height={45}
-                              />
-                            )}
-                            {!loading && (
-                              <text
-                                style={{
-                                  fontSize: "2.6rem",
-                                }}
-                              >
-                                CONTATO
-                              </text>
-                            )}
+                            <text
+                              style={{
+                                fontSize: "2.6rem",
+                              }}
+                            >
+                              CONTATO
+                            </text>
                           </Button>
                         </Grid>
                       </Grid>
@@ -265,20 +200,11 @@ function App() {
                             marginRight: 10,
                           }}
                         >
-                          {loading && (
-                            <ComponentSkeleton
-                              variant={"text"}
-                              width={192}
-                              height={40}
-                            />
-                          )}
-                          {!loading && (
-                            <text
-                              style={{ color: "#bf0413", fontSize: "2.3rem" }}
-                            >
-                              FAÇA SEU PEDIDO
-                            </text>
-                          )}
+                          <text
+                            style={{ color: "#bf0413", fontSize: "2.3rem" }}
+                          >
+                            FAÇA SEU PEDIDO
+                          </text>
                         </Button>
                         <IconButton
                           href="https://www.instagram.com/polpafrutanatural/"
@@ -287,18 +213,9 @@ function App() {
                             marginRight: 20,
                           }}
                         >
-                          {loading && (
-                            <ComponentSkeleton
-                              variant={"rect"}
-                              width={20}
-                              height={20}
-                            />
-                          )}
-                          {!loading && (
-                            <InstagramOutlined
-                              style={{ fontSize: 20, color: "#bf0413" }}
-                            />
-                          )}
+                          <InstagramOutlined
+                            style={{ fontSize: 20, color: "#bf0413" }}
+                          />
                         </IconButton>
                         <IconButton
                           href=""
@@ -307,18 +224,9 @@ function App() {
                             marginRight: 20,
                           }}
                         >
-                          {loading && (
-                            <ComponentSkeleton
-                              variant={"rect"}
-                              width={20}
-                              height={20}
-                            />
-                          )}
-                          {!loading && (
-                            <WhatsAppOutlined
-                              style={{ fontSize: 20, color: "#bf0413" }}
-                            />
-                          )}
+                          <WhatsAppOutlined
+                            style={{ fontSize: 20, color: "#bf0413" }}
+                          />
                         </IconButton>
                         <IconButton
                           href=""
@@ -327,18 +235,9 @@ function App() {
                             marginRight: 20,
                           }}
                         >
-                          {loading && (
-                            <ComponentSkeleton
-                              variant={"rect"}
-                              width={20}
-                              height={20}
-                            />
-                          )}
-                          {!loading && (
-                            <FacebookOutlined
-                              style={{ fontSize: 20, color: "#bf0413" }}
-                            />
-                          )}
+                          <FacebookOutlined
+                            style={{ fontSize: 20, color: "#bf0413" }}
+                          />
                         </IconButton>
                       </Grid>
                     </Grid>
@@ -355,20 +254,9 @@ function App() {
                           marginRight: 10,
                         }}
                       >
-                        {loading && (
-                          <ComponentSkeleton
-                            variant={"text"}
-                            width={126}
-                            height={26}
-                          />
-                        )}
-                        {!loading && (
-                          <text
-                            style={{ color: "#bf0413", fontSize: "1.5rem" }}
-                          >
-                            FAÇA SEU PEDIDO
-                          </text>
-                        )}
+                        <text style={{ color: "#bf0413", fontSize: "1.5rem" }}>
+                          FAÇA SEU PEDIDO
+                        </text>
                       </Button>
                       <MenuButton />
                     </Grid>
@@ -387,19 +275,10 @@ function App() {
                   backgroundColor: "#fff",
                 }}
               >
-                {loading && (
-                  <ComponentSkeleton
-                    variant={"rect"}
-                    width={533}
-                    height={"40vh"}
-                  />
-                )}
-                {!loading && (
-                  <img
-                    src={LogoP}
-                    style={{ width: "70%", padding: 20, paddingRight: 30 }}
-                  />
-                )}
+                <img
+                  src={LogoP}
+                  style={{ width: "70%", padding: 20, paddingRight: 30 }}
+                />
               </Grid>
               <Grid
                 style={{
@@ -410,16 +289,7 @@ function App() {
                 }}
               >
                 <Button style={{ color: "#fff", borderRadius: 20 }}>
-                  {loading && (
-                    <ComponentSkeleton
-                      variant={"text"}
-                      width={256}
-                      height={63}
-                    />
-                  )}
-                  {!loading && (
-                    <b className={classes.textDefault}>CONHEÇA-NOS</b>
-                  )}
+                  <b className={classes.textDefault}>CONHEÇA-NOS</b>
                 </Button>
               </Grid>
             </Grid>
@@ -433,14 +303,9 @@ function App() {
                   display: "flex",
                 }}
               >
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={283} height={42} />
-                )}
-                {!loading && (
-                  <b className={classes.textDefault} style={{ color: "#fff" }}>
-                    NOSSAS POLPAS
-                  </b>
-                )}
+                <b className={classes.textDefault} style={{ color: "#fff" }}>
+                  NOSSAS POLPAS
+                </b>
               </Grid>
               <Grid className={classes.containerDesktop}>
                 <Carrousel />
@@ -488,14 +353,7 @@ function App() {
                     display: "flex",
                   }}
                 >
-                  {loading && (
-                    <ComponentSkeleton
-                      variant={"rect"}
-                      width={581}
-                      height={"30vh"}
-                    />
-                  )}
-                  {!loading && <img src={LogoG} style={{ width: "80%" }} />}
+                  <img src={LogoG} style={{ width: "80%" }} />
                 </Grid>
               </Grid>
               <Grid
@@ -508,119 +366,81 @@ function App() {
                   marginTop: 30,
                 }}
               >
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={112} height={29} />
-                )}
-                {!loading && (
-                  <b
-                    style={{ color: "#4b830d", fontSize: 25, marginBottom: 40 }}
-                  >
-                    CONTATO
-                  </b>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={170} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 9,
-                      textAlign: "center",
-                    }}
-                  >
-                    AV. Bonfim nº444
-                  </text>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={198} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 9,
-                      textAlign: "center",
-                    }}
-                  >
-                    Bairro Augusto Luna
-                  </text>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={157} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 9,
-                      textAlign: "center",
-                    }}
-                  >
-                    CEP:657500000
-                  </text>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={202} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 20,
-                      textAlign: "center",
-                    }}
-                  >
-                    Esperantinópolis-MA
-                  </text>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={268} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 5,
-                      textAlign: "center",
-                    }}
-                  >
-                    <b>Whatsaap:</b> [99]98812 5040
-                  </text>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={262} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 20,
-                      textAlign: "center",
-                    }}
-                  >
-                    <b>Whatsaap:</b> [99]99903 0673
-                  </text>
-                )}
-                {loading && (
-                  <ComponentSkeleton variant={"text"} width={377} height={25} />
-                )}
-                {!loading && (
-                  <text
-                    style={{
-                      fontSize: 22,
-                      marginBottom: 15,
-                      textAlign: "center",
-                    }}
-                  >
-                    <b>E-mail:</b> contato@polpasnatural.com.br
-                  </text>
-                )}
+                <b style={{ color: "#4b830d", fontSize: 25, marginBottom: 40 }}>
+                  CONTATO
+                </b>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 9,
+                    textAlign: "center",
+                  }}
+                >
+                  AV. Bonfim nº444
+                </text>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 9,
+                    textAlign: "center",
+                  }}
+                >
+                  Bairro Augusto Luna
+                </text>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 9,
+                    textAlign: "center",
+                  }}
+                >
+                  CEP:657500000
+                </text>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  Esperantinópolis-MA
+                </text>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 5,
+                    textAlign: "center",
+                  }}
+                >
+                  <b>Whatsaap:</b> [99]98812 5040
+                </text>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  <b>Whatsaap:</b> [99]99903 0673
+                </text>
+
+                <text
+                  style={{
+                    fontSize: 22,
+                    marginBottom: 15,
+                    textAlign: "center",
+                  }}
+                >
+                  <b>E-mail:</b> contato@polpasnatural.com.br
+                </text>
               </Grid>
             </Grid>
-            <text style={{ textAlign: "center", fontSize: "1.6rem" }}>
-              Agência KERA © 2020 - Todos os direitos reservados
-            </text>
           </Grid>
         </div>
       </body>
