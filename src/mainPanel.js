@@ -1,7 +1,47 @@
 import React from "react";
 import delivery from "./img/delivery.svg";
-import { Grid, Button } from "@material-ui/core";
+import { makeStyles, Grid, Button } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  main: {
+    backgroundColor: "#f2b705",
+    height: "75vh",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column-reverse",
+    [theme.breakpoints.up("md")]: {
+      backgroundColor: "#f2b705",
+      height: "75vh",
+      width: "100%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "row",
+    },
+  },
+  textPanel: {
+    marginTop: 20,
+    width: "80%",
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+      display: "flex",
+      flexDirection: "column",
+    },
+  },
+  image: {
+    width: 300,
+    [theme.breakpoints.up("md")]: {
+      width: 500,
+    },
+  },
+}));
+
 export default function MainPanel() {
+  const classes = useStyles();
   function SendButton() {
     return (
       <Button
@@ -22,20 +62,8 @@ export default function MainPanel() {
   }
   return (
     <>
-      <Grid
-        style={{
-          backgroundColor: "#f2b705",
-          height: "75vh",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "row",
-        }}
-      >
-        <Grid
-          style={{ width: "50%", display: "flex", flexDirection: "column" }}
-        >
+      <Grid className={classes.main}>
+        <Grid className={classes.textPanel}>
           <b style={{ fontSize: 35, color: "#bf0413", marginBottom: 15 }}>
             VAMOS DEIXAR <br /> EM SUA CASA
           </b>
@@ -51,7 +79,7 @@ export default function MainPanel() {
           </Grid>
         </Grid>
         <Grid>
-          <img src={delivery} />
+          <img src={delivery} className={classes.image} />
         </Grid>
       </Grid>
     </>

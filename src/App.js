@@ -1,23 +1,10 @@
 import React from "react";
 import "./App.css";
-import {
-  AppBar,
-  makeStyles,
-  createMuiTheme,
-  IconButton,
-  Button,
-  Grid,
-} from "@material-ui/core";
+import { AppBar, makeStyles, createMuiTheme, Grid } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
-import {
-  InstagramOutlined,
-  WhatsAppOutlined,
-  FacebookOutlined,
-} from "@ant-design/icons";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import LogoP from "../src/img/iconp.png";
 import LogoFooter from "../src/img/logofooter.svg";
-import MenuButton from "./draw";
 import Carrousel from "./carrousel";
 import CarrouselMobile from "./carrouselMobile";
 import MainPanel from "./mainPanel";
@@ -145,7 +132,6 @@ function App() {
                   alignItems: "center",
                   justifyContent: "center",
                   display: "flex",
-                  marginBottom: 70,
                 }}
               >
                 <b className={classes.textDefault} style={{ color: "#fff" }}>
@@ -183,28 +169,24 @@ function App() {
             <Grid className={classes.footerContent}>
               <Grid
                 style={{
-                  width: "100%",
+                  width: "70%",
                   alignItems: "center",
                   justifyContent: "center",
                   display: "flex",
-                  marginTop: 30,
                 }}
               >
-                <Grid
-                  style={{
-                    width: "70%",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <img src={LogoFooter} />
-                  <text style={{ fontSize: 16, marginTop: 5 }}>
-                    contato@polpasnatural.com.br
-                  </text>
-                </Grid>
+                <img src={LogoFooter} />
               </Grid>
+              <text
+                style={{
+                  fontSize: 16,
+                  marginTop: 5,
+                  textAlign: "center",
+                  lineHeight: 1.7,
+                }}
+              >
+                contato@polpasnatural.com.br
+              </text>
             </Grid>
           </Grid>
         </div>

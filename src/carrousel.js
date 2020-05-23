@@ -24,7 +24,6 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
-    marginBottom: 70,
   },
   ContainerDead: {
     display: "flex",
