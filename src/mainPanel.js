@@ -28,10 +28,26 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     display: "flex",
     flexDirection: "column",
+    textAlign: "center",
     [theme.breakpoints.up("md")]: {
       width: "50%",
       display: "flex",
       flexDirection: "column",
+      textAlign: "left",
+    },
+  },
+  text: {
+    textAlign: "justify",
+    fontSize: "2rem",
+    color: "#bf0413",
+    lineHeight: 1.6,
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "left",
+      fontSize: "2rem",
+      color: "#bf0413",
+      lineHeight: 1.6,
+      width: "50%",
     },
   },
   image: {
@@ -67,14 +83,11 @@ export default function MainPanel() {
       <Grid className={classes.main}>
         <Grid className={classes.textPanel}>
           <b style={{ fontSize: "3.5rem", color: "#bf0413", marginBottom: 15 }}>
-            VAMOS DEIXAR <br /> EM SUA CASA
+            DEIXAREMOS EM SUA CASA!
           </b>
-          <text style={{ fontSize: "2rem", color: "#bf0413", lineHeight: 1.6 }}>
-            A melhor polpa em pronta entrega
-            <br />
-            para Esperantinópolis e região.
-            <br />
-            Peça já sua Polpa de Frutas Natural
+          <text className={classes.text}>
+            A melhor polpa em pronta entrega para Esperantinópolis e região.
+            Peça já sua Polpa de Frutas Natural!
           </text>
           <Grid style={{ marginTop: 40 }}>
             <SendButton />

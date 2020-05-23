@@ -28,18 +28,20 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20,
     width: "80%",
     display: "flex",
+    textAlign: "center",
     flexDirection: "column",
     [theme.breakpoints.up("md")]: {
       width: "50%",
       display: "flex",
       flexDirection: "column",
+      textAlign: "right",
     },
   },
   text: {
     fontSize: 20,
     color: "#ffffff",
     lineHeight: 1.6,
-    textAlign: "right",
+    textAlign: "justify",
     width: "100%",
     [theme.breakpoints.up("md")]: {
       fontSize: 20,
@@ -54,6 +56,17 @@ const useStyles = makeStyles((theme) => ({
     width: 300,
     [theme.breakpoints.up("md")]: {
       width: 500,
+    },
+  },
+  gridInstagram: {
+    marginTop: 10,
+    justifyContent: "center",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      alignItems: "right",
+      marginTop: 10,
+      alignItems: "center",
+      justifyContent: "flex-end",
     },
   },
 }));
@@ -71,7 +84,6 @@ export default function SecondPanel() {
             fontSize: 35,
             color: "#ffffff",
             marginBottom: 15,
-            textAlign: "end",
           }}
         >
           CONHEÇA-NOS
@@ -90,15 +102,7 @@ export default function SecondPanel() {
           </text>
         </Grid>
 
-        <Grid
-          style={{
-            display: "flex",
-            alignItems: "right",
-            marginTop: 10,
-            alignItems: "center",
-          }}
-          justify="flex-end"
-        >
+        <Grid className={classes.gridInstagram}>
           <IconButton
             href=""
             style={{
