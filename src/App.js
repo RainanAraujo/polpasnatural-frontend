@@ -16,7 +16,7 @@ import {
 } from "@ant-design/icons";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import LogoP from "../src/img/iconp.png";
-import LogoG from "../src/img/logog.png";
+import LogoFooter from "../src/img/logofooter.svg";
 import MenuButton from "./draw";
 import Carrousel from "./carrousel";
 import CarrouselMobile from "./carrouselMobile";
@@ -36,7 +36,7 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: "#bf0413",
+    backgroundColor: "#fff",
     alignItems: "center",
     background: "transparent",
   },
@@ -82,18 +82,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerContent: {
-    [theme.breakpoints.up("md")]: {
-      flexGrow: 1,
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      padding: 20,
-    },
     flexGrow: 1,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: 20,
+    paddingTop: 20,
   },
 }));
 
@@ -118,14 +111,14 @@ function App() {
               <ThemeProvider theme={theme}>
                 <AppBar
                   position="static"
-                  elevation={3}
+                  elevation={0}
                   className={classes.appBar}
                 >
                   <Grid className="gridContainer" container>
                     <Grid
                       style={{
                         height: "10vh",
-                        width: "20%",
+                        width: "100%",
                         alignItems: "center",
                         backgroundColor: "#fff",
                         display: "flex",
@@ -137,105 +130,6 @@ function App() {
                         src={LogoP}
                         style={{ height: "60%", paddingRight: 10 }}
                       />
-                    </Grid>
-                    <Grid
-                      className={classes.containerDesktop}
-                      justify="space-between"
-                    >
-                      <Grid
-                        style={{
-                          height: "10vh",
-                          flexDirection: "row",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                        }}
-                      >
-                        <Grid className="gridMenuButtonsText">
-                          <Button onClick={scrollInicio}>
-                            <text
-                              style={{
-                                fontSize: "2.6rem",
-                              }}
-                            >
-                              INÍCIO
-                            </text>
-                          </Button>
-                          <Button>
-                            <text
-                              style={{
-                                fontSize: "2.6rem",
-                              }}
-                            >
-                              CONHEÇA-NOS
-                            </text>
-                          </Button>
-                          <Button onClick={scrollContato}>
-                            <text
-                              style={{
-                                fontSize: "2.6rem",
-                              }}
-                            >
-                              CONTATO
-                            </text>
-                          </Button>
-                        </Grid>
-                      </Grid>
-
-                      <Grid className="gridMenuButtons">
-                        <IconButton
-                          href="https://www.instagram.com/polpafrutanatural/"
-                          style={{
-                            backgroundColor: "#F2B705",
-                            marginRight: 20,
-                          }}
-                        >
-                          <InstagramOutlined
-                            style={{ fontSize: 20, color: "#bf0413" }}
-                          />
-                        </IconButton>
-                        <IconButton
-                          href=""
-                          style={{
-                            backgroundColor: "#F2B705",
-                            marginRight: 20,
-                          }}
-                        >
-                          <WhatsAppOutlined
-                            style={{ fontSize: 20, color: "#bf0413" }}
-                          />
-                        </IconButton>
-                        <IconButton
-                          href=""
-                          style={{
-                            backgroundColor: "#F2B705",
-                            marginRight: 20,
-                          }}
-                        >
-                          <FacebookOutlined
-                            style={{ fontSize: 20, color: "#bf0413" }}
-                          />
-                        </IconButton>
-                      </Grid>
-                    </Grid>
-                    <Grid
-                      className={classes.sectionMobile}
-                      justify="space-around"
-                    >
-                      <Button
-                        href="https://api.whatsapp.com/send?phone=+5599988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!"
-                        style={{
-                          backgroundColor: "#F2B705",
-                          borderRadius: 10,
-                          alignItems: "center",
-                          marginRight: 10,
-                        }}
-                      >
-                        <text style={{ color: "#bf0413", fontSize: "1.5rem" }}>
-                          FAÇA SEU PEDIDO
-                        </text>
-                      </Button>
-                      <MenuButton />
                     </Grid>
                   </Grid>
                 </AppBar>
@@ -251,6 +145,7 @@ function App() {
                   alignItems: "center",
                   justifyContent: "center",
                   display: "flex",
+                  marginBottom: 70,
                 }}
               >
                 <b className={classes.textDefault} style={{ color: "#fff" }}>
@@ -285,7 +180,7 @@ function App() {
               paddingBottom: 10,
             }}
           >
-            <Grid className={classes.footerContent} justify="space-around">
+            <Grid className={classes.footerContent}>
               <Grid
                 style={{
                   width: "100%",
@@ -301,94 +196,14 @@ function App() {
                     alignItems: "center",
                     justifyContent: "center",
                     display: "flex",
+                    flexDirection: "column",
                   }}
                 >
-                  <img src={LogoG} style={{ width: "80%" }} />
+                  <img src={LogoFooter} />
+                  <text style={{ fontSize: 16, marginTop: 5 }}>
+                    contato@polpasnatural.com.br
+                  </text>
                 </Grid>
-              </Grid>
-              <Grid
-                style={{
-                  width: "100%",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  display: "flex",
-                  flexDirection: "column",
-                  marginTop: 30,
-                }}
-              >
-                <b style={{ color: "#4b830d", fontSize: 25, marginBottom: 40 }}>
-                  CONTATO
-                </b>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 9,
-                    textAlign: "center",
-                  }}
-                >
-                  AV. Bonfim nº444
-                </text>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 9,
-                    textAlign: "center",
-                  }}
-                >
-                  Bairro Augusto Luna
-                </text>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 9,
-                    textAlign: "center",
-                  }}
-                >
-                  CEP:657500000
-                </text>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 20,
-                    textAlign: "center",
-                  }}
-                >
-                  Esperantinópolis-MA
-                </text>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 5,
-                    textAlign: "center",
-                  }}
-                >
-                  <b>Whatsaap:</b> [99]98812 5040
-                </text>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 20,
-                    textAlign: "center",
-                  }}
-                >
-                  <b>Whatsaap:</b> [99]99903 0673
-                </text>
-
-                <text
-                  style={{
-                    fontSize: 22,
-                    marginBottom: 15,
-                    textAlign: "center",
-                  }}
-                >
-                  <b>E-mail:</b> contato@polpasnatural.com.br
-                </text>
               </Grid>
             </Grid>
           </Grid>

@@ -23,6 +23,13 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    flexDirection: "row",
+    marginBottom: 70,
+  },
+  ContainerDead: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     position: "static",
   },
   ContainerChild: {
@@ -56,7 +63,7 @@ export default function Carrousel() {
 
   function SlideComponent(props) {
     return (
-      <Grid className={classes.ContainerChild}>
+      <Grid className={classes.ContainerMain}>
         <Grid className={classes.ContainerSlide}>
           <text style={{ fontSize: "30px", color: "#5a9216" }}>
             {props.nameTitle}
@@ -102,7 +109,7 @@ export default function Carrousel() {
           </ButtonBack>
           <Slider>
             <Slide index={0}>
-              <Grid className={classes.ContainerMain} justify="space-around">
+              <Grid className={classes.ContainerDead} justify="space-around">
                 <Grid className={classes.ContainerChild}>
                   <SlideComponent nameTitle="ACEROLA" nameImage={pactAcerola} />
                   <SlideComponent nameTitle="GOIABA" nameImage={pactGoiaba} />

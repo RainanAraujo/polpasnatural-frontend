@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, Button, Grid } from "@material-ui/core";
-import logo from "./img/logo2.png";
+import logo from "./img/logo2.svg";
 
 const useStyles = makeStyles((theme) => ({
   div1: {
@@ -11,6 +11,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
+    marginBottom: 70,
+    marginTop: 70,
   },
 }));
 

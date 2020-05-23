@@ -1,5 +1,5 @@
 import React from "react";
-import delivery from "./img/delivery.png";
+import delivery from "./img/delivery.svg";
 import { Grid, Button } from "@material-ui/core";
 export default function MainPanel() {
   function SendButton() {
