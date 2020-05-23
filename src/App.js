@@ -3,7 +3,7 @@ import "./App.css";
 import { AppBar, makeStyles, createMuiTheme, Grid } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import LogoP from "../src/img/iconp.png";
+import LogoP from "../src/img/logop.svg";
 import LogoFooter from "../src/img/logofooter.svg";
 import Carrousel from "./carrousel";
 import CarrouselMobile from "./carrouselMobile";
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textDefault: {
-    fontSize: "2.3rem",
+    fontSize: "3.5rem",
     [theme.breakpoints.up("md")]: {
       fontSize: "3.6rem",
     },
@@ -115,7 +115,7 @@ function App() {
                     >
                       <img
                         src={LogoP}
-                        style={{ height: "60%", paddingRight: 10 }}
+                        style={{ height: "60%", paddingLeft: 10 }}
                       />
                     </Grid>
                   </Grid>

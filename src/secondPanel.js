@@ -4,18 +4,17 @@ import logo from "./img/logo2.svg";
 import { InstagramOutlined } from "@ant-design/icons";
 const useStyles = makeStyles((theme) => ({
   div1: {
+    paddingTop: 20,
+    paddingBottom: 20,
     backgroundColor: "#bf0413",
-    height: "75vh",
     width: "100%",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    marginBottom: 50,
-    marginTop: 70,
+
     [theme.breakpoints.up("md")]: {
       backgroundColor: "#bf0413",
-      height: "75vh",
       width: "100%",
       display: "flex",
       justifyContent: "center",

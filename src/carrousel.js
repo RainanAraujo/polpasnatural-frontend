@@ -9,13 +9,13 @@ import {
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { Grid, Button, makeStyles } from "@material-ui/core";
-import pactAcai from "../src/img/pactAcai.png";
-import pactAcerola from "../src/img/pactAcerola.png";
-import pactCaja from "../src/img/pactCaja.png";
-import pactCupuacu from "../src/img/pactCupuacu.png";
-import pactGoiaba from "../src/img/pactGoiaba.png";
-import pactMaracuja from "../src/img/pactMaracuja.png";
-import pactTamarindo from "../src/img/pactTamarindo.png";
+import pactAcai from "../src/img/pactAcai.svg";
+import pactAcerola from "../src/img/pactAcerola.svg";
+import pactCaja from "../src/img/pactCaja.svg";
+import pactCupuacu from "../src/img/pactCupuacu.svg";
+import pactGoiaba from "../src/img/pactGoiaba.svg";
+import pactMaracuja from "../src/img/pactMaracuja.svg";
+import pactTamarindo from "../src/img/pactTamarindo.svg";
 import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
 
 const useStyles = makeStyles({

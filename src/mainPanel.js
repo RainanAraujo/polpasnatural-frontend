@@ -4,8 +4,9 @@ import { makeStyles, Grid, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   main: {
+    paddingTop: 20,
+    paddingBottom: 20,
     backgroundColor: "#f2b705",
-    height: "75vh",
     width: "100%",
     display: "flex",
     justifyContent: "center",
@@ -13,12 +14,13 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column-reverse",
     [theme.breakpoints.up("md")]: {
       backgroundColor: "#f2b705",
-      height: "75vh",
       width: "100%",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
       flexDirection: "row",
+      paddingBottom: 50,
+      paddingTop: 70,
     },
   },
   textPanel: {
@@ -64,10 +66,10 @@ export default function MainPanel() {
     <>
       <Grid className={classes.main}>
         <Grid className={classes.textPanel}>
-          <b style={{ fontSize: 35, color: "#bf0413", marginBottom: 15 }}>
+          <b style={{ fontSize: "3.5rem", color: "#bf0413", marginBottom: 15 }}>
             VAMOS DEIXAR <br /> EM SUA CASA
           </b>
-          <text style={{ fontSize: 20, color: "#bf0413", lineHeight: 1.6 }}>
+          <text style={{ fontSize: "2rem", color: "#bf0413", lineHeight: 1.6 }}>
             A melhor polpa em pronta entrega
             <br />
             para Esperantinópolis e região.
