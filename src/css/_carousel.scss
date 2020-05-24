@@ -1,0 +1,41 @@
+.containerMain {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+}
+
+.containerGroupSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 30px;
+  text {
+    color: #b91400;
+    font-size: 25px;
+  }
+}
+
+.containerSingleSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-top: 40px;
+  border-radius: 30px;
+  width: 70%;
+
+  text {
+    font-size: 25px;
+    color: #5a9216;
+  }
+}
+.buttonsNextAndBack {
+  background-color: #f2b705;
+  border-radius: 50px;
+  border: none;
+  margin: 5px;
+}

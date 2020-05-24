@@ -1,0 +1,204 @@
+@mixin container($color) {
+  background-color: $color;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 50px;
+  padding-top: 70px;
+}
+
+@mixin layoutPanel($align) {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: $align;
+}
+
+.imagesMain {
+  width: 500px;
+}
+
+/* Delivery Panel Desktop */
+
+.deliveryPanelContainer {
+  @include container(#f2b705);
+}
+
+.layoutDeliveryPanel {
+  @include layoutPanel(left);
+  b {
+    font-size: 3.5rem;
+    color: #bf0413;
+    margin-bottom: 15px;
+  }
+
+  text:nth-child(2) {
+    text-align: left;
+    font-size: 2rem;
+    color: #bf0413;
+    line-height: 1.6;
+    width: 50%;
+  }
+  text:nth-child(1) {
+    width: 100%;
+    color: #ffffff;
+    font-size: 2.3rem;
+  }
+}
+
+/* About Panel Desktop */
+
+.aboutPanelContainer {
+  @include container(#bf0413);
+}
+.layoutPanelAbout {
+  @include layoutPanel(right);
+  b {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  text {
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: right;
+    width: 50%;
+  }
+}
+
+.gridInstagram {
+  display: flex;
+  align-items: right;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  b {
+    font-size: 20px;
+    color: "#ffffff";
+  }
+}
+
+/* Panel Products Desktop */
+
+.productsPanelContainer {
+  height: 13vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  b {
+    font-size: 3.5rem;
+    color: #ffffff;
+  }
+}
+
+.carouselDesktop {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  .carouselMobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  @mixin container($color, $direction) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $color;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+  }
+
+  @mixin layoutPanel() {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagesMain {
+    margin-top: 40px;
+    width: 300px;
+  }
+  /* Delivery Panel Mobile */
+  .deliveryPanelContainer {
+    @include container(#f2b705, column-reverse);
+  }
+
+  .layoutDeliveryPanel {
+    @include layoutPanel();
+    b {
+      font-size: 3.5rem;
+      color: #bf0413;
+      margin-bottom: 15px;
+    }
+
+    text:nth-child(2) {
+      text-align: left;
+      font-size: 2rem;
+      color: #bf0413;
+      line-height: 1.6;
+      width: 100%;
+      text-align: center;
+    }
+    text:nth-child(1) {
+      width: 100%;
+      color: #ffffff;
+      font-size: 2.3rem;
+    }
+  }
+
+  /* About Panel Mobile */
+
+  .aboutPanelContainer {
+    @include container(#bf0413, column);
+  }
+
+  .layoutPanelAbout {
+    @include layoutPanel();
+    b {
+      font-size: 3.5rem;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    text {
+      font-size: 2rem;
+      color: #ffffff;
+      line-height: 1.6;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .gridInstagram {
+    margin-top: 35px;
+    justify-content: center;
+    b {
+      font-size: 20px;
+      color: "#ffffff";
+    }
+  }
+
+  /* Panel Products Desktop */
+
+  .carouselDesktop {
+    display: none;
+  }
+
+  .carouselMobile {
+    display: "flex";
+    flex-grow: 1;
+    align-items: "center";
+  }
+}
