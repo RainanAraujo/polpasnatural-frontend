@@ -83,7 +83,7 @@ export default function MainPanel() {
       <Grid className={classes.main}>
         <Grid className={classes.textPanel}>
           <b style={{ fontSize: "3.5rem", color: "#bf0413", marginBottom: 15 }}>
-            DEIXAREMOS EM SUA CASA!
+            Deixaremos em sua casa!
           </b>
           <text className={classes.text}>
             A melhor polpa em pronta entrega para Esperantinópolis e região.

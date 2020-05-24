@@ -135,7 +135,7 @@ function App() {
                 }}
               >
                 <b className={classes.textDefault} style={{ color: "#fff" }}>
-                  NOSSAS POLPAS
+                  Nossas polpas
                 </b>
               </Grid>
               <Grid className={classes.containerDesktop}>

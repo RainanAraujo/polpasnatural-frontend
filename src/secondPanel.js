@@ -38,13 +38,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    fontSize: 20,
+    fontSize: "2rem",
     color: "#ffffff",
     lineHeight: 1.6,
     textAlign: "center",
     width: "100%",
     [theme.breakpoints.up("md")]: {
-      fontSize: 20,
+      fontSize: "2rem",
       color: "#ffffff",
       lineHeight: 1.6,
       textAlign: "right",
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridInstagram: {
-    marginTop: 25,
+    marginTop: 35,
     justifyContent: "center",
     [theme.breakpoints.up("md")]: {
       display: "flex",
@@ -83,10 +83,10 @@ export default function SecondPanel() {
           style={{
             fontSize: 35,
             color: "#ffffff",
-            marginBottom: 15,
+            marginBottom: 25,
           }}
         >
-          CONHEÇA-NOS
+          Conheça-nos
         </b>
         <Grid
           style={{
@@ -120,7 +120,7 @@ export default function SecondPanel() {
               color: "#ffffff",
             }}
           >
-            @polpasfrutanatural
+            @polpafrutanatural
           </b>
         </Grid>
       </Grid>
