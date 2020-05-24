@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     color: "#ffffff",
     lineHeight: 1.6,
-    textAlign: "justify",
+    textAlign: "center",
     width: "100%",
     [theme.breakpoints.up("md")]: {
       fontSize: 20,
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridInstagram: {
-    marginTop: 10,
+    marginTop: 25,
     justifyContent: "center",
     [theme.breakpoints.up("md")]: {
       display: "flex",
@@ -104,7 +104,7 @@ export default function SecondPanel() {
 
         <Grid className={classes.gridInstagram}>
           <IconButton
-            href=""
+            href="https://www.instagram.com/polpafrutanatural/"
             style={{
               backgroundColor: "#F2B705",
               marginRight: 20,

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    textAlign: "justify",
+    textAlign: "center",
     fontSize: "2rem",
     color: "#bf0413",
     lineHeight: 1.6,
