@@ -1,5 +1,5 @@
 # polpasnatural-frontend
-WEB application for displaying POLPAS NATURAL products with ReactJs and testing SASS extension.
+WEB application for displaying POLPAS NATURAL products with ReactJs, testing SASS extension and Carousel components.
  
  ### DEMO
  
@@ -23,7 +23,7 @@ or
 
 ### Starting
 
-Start the application on your local host:
+Start the application on your localhost:
 
 > $ npm start
 
