@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 env:
-  BUCKET: github-deploy
+  BUCKET: polpasnatural.com.br
 
 jobs:
 
