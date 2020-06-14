@@ -35,7 +35,7 @@ export default function MainPanel() {
           </Grid>
         </Grid>
         <Grid>
-          <img src={delivery} className="imagesMain " />
+          <img src={delivery} className="imagesMain " alt="Delivery" />
         </Grid>
       </Grid>
     </>

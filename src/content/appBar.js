@@ -7,7 +7,11 @@ export default function AppBarComponent() {
   return (
     <AppBar position="static" elevation={0}>
       <Grid className="containerAppBar">
-        <img src={LogoP} style={{ height: "60%", paddingLeft: 10 }} />
+        <img
+          src={LogoP}
+          style={{ height: "60%", paddingLeft: 10 }}
+          alt="Logo P"
+        />
       </Grid>
     </AppBar>
   );

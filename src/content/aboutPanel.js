@@ -8,7 +8,7 @@ export default function SecondPanel() {
   return (
     <Grid className="aboutPanelContainer">
       <Grid>
-        <img src={logo} className="imagesMain " />
+        <img src={logo} className="imagesMain " alt="Logo" />
       </Grid>
       <Grid className="layoutPanelAbout">
         <b>Conheça-nos</b>

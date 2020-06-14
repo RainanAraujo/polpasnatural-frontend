@@ -6,7 +6,7 @@ import "../css/main.css";
 export default function Footer() {
   return (
     <Grid className="footerContainer">
-      <img src={LogoFooter} />
+      <img src={LogoFooter} alt="Logo" />
       <text>contato@polpasnatural.com.br</text>
     </Grid>
   );

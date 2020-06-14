@@ -25,7 +25,7 @@ export default function Carrousel() {
         <Grid className="containerSingleSlide">
           <text style={{ fontSize: 20 }}>{props.NameTitle}</text>
 
-          <img src={() => props.NameImage} style={{ width: 250 }} />
+          <img src={props.NameImage} style={{ width: 250 }} alt="Card" />
         </Grid>
         <Button
           style={{
