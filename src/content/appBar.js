@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, makeStyles, Grid } from "@material-ui/core";
+import { AppBar, Grid } from "@material-ui/core";
 import LogoP from "../img/logop.svg";
 import "../css/main.css";
 

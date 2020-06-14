@@ -8,7 +8,7 @@ import {
 } from "pure-react-carousel";
 import "../../css/main.css";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import { Grid, Button, makeStyles } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import pactAcai from "../../img/pactAcai.svg";
 import pactAcerola from "../../img/pactAcerola.svg";
 import pactCaja from "../../img/pactCaja.svg";
@@ -25,7 +25,7 @@ export default function Carrousel() {
         <Grid className="containerSingleSlide">
           <text style={{ fontSize: 20 }}>{props.NameTitle}</text>
 
-          <img src={props.NameImage} style={{ width: 250 }} />
+          <img src={() => props.NameImage} style={{ width: 250 }} />
         </Grid>
         <Button
           style={{
