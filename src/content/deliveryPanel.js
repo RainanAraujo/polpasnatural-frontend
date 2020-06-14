@@ -4,7 +4,7 @@ import { Grid, Button } from "@material-ui/core";
 import "../css/main.css";
 export default function MainPanel() {
   const linkWhatsapp =
-    "https://api.whatsapp.com/send?phone=+5599988125040&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!";
+    "https://api.whatsapp.com/send?phone=+5599984063843&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20de%20polpas!";
   function SendButton() {
     return (
       <Button
