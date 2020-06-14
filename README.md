@@ -1,5 +1,12 @@
 # polpasnatural-frontend
- WEB application for presentation of the company Polpas Natural with ReactJS.
+WEB application for displaying POLPAS NATURAL products with ReactJs, testing SASS extension and Carousel components.
+ 
+ ### DEMO
+ 
+ <p align="center">
+<img  src="https://github.com/RainanAraujo/polpasnatural-frontend/blob/master/demo/gifMobile.gif" height="300"/>
+<img  src="https://github.com/RainanAraujo/polpasnatural-frontend/blob/master/demo/gifDesktop.gif" height="300"/>
+ </p>
  
 ### Install
 Clone this repository for your computer:
@@ -16,7 +23,7 @@ or
 
 ### Starting
 
-Start the application on your local host:
+Start the application on your localhost:
 
 > $ npm start
 
